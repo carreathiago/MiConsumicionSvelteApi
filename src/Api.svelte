@@ -31,7 +31,9 @@ Datos = await response.json();
     {/each}
 </div>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
     table {
+  font-family: 'Exo', sans-serif;
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;

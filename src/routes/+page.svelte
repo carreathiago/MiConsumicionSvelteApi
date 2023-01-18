@@ -23,11 +23,14 @@ import Api from "../Api.svelte";
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+
 h1 {
     text-align: center;
     font-family: 'Exo 2', sans-serif;
 }
 table {
+  font-family: 'Exo', sans-serif;
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;
