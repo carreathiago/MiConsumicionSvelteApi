@@ -13,26 +13,27 @@ Datos = await response.json();
 <div class="Datos">
     {#each Datos as Dato}
     <table>
-    <thead>
-        <tr>
-            <th>{Dato.id}</th>
-                <th>{Dato.name}</th>
-                <th>{Dato.email}</th>
-                <th>{Dato.legajo}</th>
-                <th>{Dato.password}</th>
-                <th>{Dato.app}</th>
-                <th>{Dato.role}</th>
-                <th>{Dato.status}</th>
-            </tr>
-            </thead>
+      <tbody>
+                <td>{Dato.id}</td>
+                <td>{Dato.name}</td>
+                <td>{Dato.email}</td>
+                <td>{Dato.legajo}</td>
+                <td>{Dato.password}</td>
+                <td>{Dato.app}</td>
+                <td>{Dato.role}</td>
+                <td>{Dato.status}</td>
+              </tbody>
                 </table>
     {:else}
     <p>Cargando datos...</p>
     {/each}
 </div>
 <style>
+  
   @import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
-    table {
+  @import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+  
+table {
   font-family: 'Exo', sans-serif;
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -42,18 +43,11 @@ Datos = await response.json();
   table-layout: fixed;
 }
 
-table tr {
+table td {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
-  padding: .35em;
-}
-
-table th{
   padding: .625em;
   text-align: center;
-}
-
-table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -64,7 +58,7 @@ table th {
     border: 0;
   }
   
-  table thead {
+  table tbody {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -73,12 +67,6 @@ table th {
     padding: 0;
     position: absolute;
     width: 1px;
-  }
-  
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
   }
   
 }
